@@ -1,0 +1,395 @@
+:root {
+  --green-color: #458749;
+  --orange-color: #e77e1d;
+  --orange-hover-color: #ff8b20;
+  --red-color: #e52528;
+  --yellow-light: #fffceb;
+  --light-green: #ebeeea;
+  --grey-color: #d3d7d1;
+  --grey-dark-color: #adb4a9;
+  --dark-color: #262626;
+  --dark-green: #39532b;
+}
+
+@font-face {
+  font-family: GolosRegular;
+  src: url(../fonts/Golos-Text_Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: GolosBold;
+  src: url(../fonts/Golos-Text_Bold.ttf);
+  font-weight: 600;
+}
+
+body {
+  font-family: GolosRegular;
+  background-color: var(--yellow-light);
+  color: var(--green-color);
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*-----page float elements---- */
+
+.page__float__element {
+  position: absolute;
+}
+
+.page__blur-1 {
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.page__blur-2 {
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.page__crumbs-1 {
+  top: 164px;
+  left: 79px;
+}
+
+.page__crumbs-2 {
+  top: 325px;
+}
+.page__crumbs-3 {
+  left: 106px;
+  top: 401px;
+}
+.page__crumbs-4 {
+  top: 152px;
+  right: 197px;
+}
+.page__crumbs-5 {
+  right: 39px;
+  top: 42px;
+}
+.page__crumbs-6 {
+  right: 124px;
+  top: 296px;
+}
+
+.page__gift-blur {
+  top: 644px;
+  left: 0;
+}
+
+.page__crumbs-blur {
+  top: 603px;
+  right: 0;
+}
+
+/*-------------header-------------*/
+
+.header {
+  padding-top: 37px;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo__icon-1 {
+  margin-right: 44px;
+}
+.header__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.header__list__item:not(:last-child) {
+  margin-right: 30px;
+}
+.header__list__item__link {
+  color: var(--dark-color);
+}
+.header__list__item__link:hover {
+  color: var(--orange-color);
+  text-decoration: none;
+}
+
+.header__button {
+  color: var(--green-color);
+  padding: 17px 36px;
+}
+.header__button img {
+  margin-right: 10px;
+}
+
+/*---------hero---------*/
+.hero {
+  position: relative;
+}
+.hero__content {
+  font-family: GolosBold;
+  margin-top: 135px;
+}
+
+.hero__content__title {
+  font-size: 112px;
+  line-height: 115px;
+}
+
+.hero__img {
+  position: absolute;
+  left: -212px;
+  top: -90px;
+  z-index: -1;
+}
+
+.hero__content__btn {
+  margin-top: 30px;
+  max-width: 304px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*--------stock-----------*/
+.stock {
+  margin-top: 140px;
+  margin-bottom: 87px;
+}
+.stock__title {
+  margin-bottom: 30px;
+}
+
+.stock__card {
+  height: 100%;
+
+  padding: 32px;
+  position: relative;
+  margin-bottom: 58px;
+}
+
+.stock__card h4 {
+  margin-top: 30px;
+}
+.stock__card p {
+  font-size: 14px;
+}
+
+.stock__card__num {
+  background-color: var(--green-color);
+  position: absolute;
+  border-radius: 50%;
+  font-weight: bold;
+  height: 48px;
+  width: 48px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 28px;
+  right: 28px;
+}
+
+.stock__card .stock__card__mark {
+  color: #e77e1e;
+}
+a.stock__card__mark {
+  text-decoration: underline;
+}
+.social {
+  display: flex;
+  gap: 13px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+.social a {
+  border: 1px solid var(--green-color);
+  width: 154px;
+  height: 49px;
+
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.social a img {
+  margin-right: 13px;
+}
+
+.stock__btn {
+  width: 304px;
+  height: 64px;
+  margin-top: 34px;
+}
+
+.stock__btn > img {
+  margin-right: 15px;
+}
+
+/*----------prizes----------*/
+.prizes {
+  margin-bottom: 75px;
+}
+.prizes__title {
+  margin-bottom: 42px;
+}
+.prizes__card {
+  padding: 40px;
+}
+
+.prizes__card__title {
+  margin-bottom: 30px;
+}
+
+.prizes__bunner {
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    var(--orange-color) 0%,
+    rgba(231, 126, 29, 0.7) 100%
+  );
+  color: #fff;
+  position: relative;
+  padding: 65px 0;
+}
+
+.prizes__bunner__title {
+  font-size: 52px;
+  font-family: GolosBold;
+}
+.prizes__bunner__subtitle {
+  margin-top: 27px;
+}
+
+.prizes__bunner__img-1 {
+  top: 20px;
+  left: -9px;
+  position: absolute;
+}
+.prizes__bunner__img-2 {
+  top: 34px;
+  right: -15px;
+  position: absolute;
+}
+
+/*----------winner------------*/
+.winner {
+  margin-bottom: 93px;
+}
+.winner__tab {
+  display: flex;
+
+  justify-content: center;
+  margin-bottom: 29px;
+  font-family: GolosBold;
+}
+
+.winner__tab__item {
+  color: var(--dark-green);
+  width: 233px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.winner__tab__item--active {
+  box-shadow: 0px 4px 92px #ffe19f;
+  color: var(--green-color);
+  border-radius: 32px;
+}
+
+.winner__data {
+  max-width: 1070px;
+  margin-bottom: 54px;
+}
+
+/*--------feedback------*/
+.feedback .container {
+  background-color: #fff;
+  padding: 0 110px;
+}
+
+.feedback__title {
+  margin-bottom: 28px;
+}
+.feedback__accardion {
+  border: 2px solid var(--light-green);
+  padding: 18px 27px;
+  margin-bottom: 15px;
+}
+
+.feedback__accardion--active .accardion__icon__icon-open {
+  display: none;
+}
+.feedback__accardion--active .accardion__icon__icon-close {
+  display: block;
+}
+.feedback__accardion__top {
+  display: flex;
+
+  align-items: center;
+}
+
+.accardion__icon__icon-close {
+  display: none;
+}
+.accardion__icon__icon-open {
+  display: block;
+}
+.feedback__accardion__icon {
+  margin-right: 16px;
+}
+.feedback__accardion--active .feedback__content {
+  margin-top: 25px;
+}
+.feedback__content {
+  color: #39532b;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.feedback__form {
+  background-color: #FFFCEB;
+  padding: 45px;
+}
+.feedback__form__subtitle {
+  padding-top:13px ;
+}
+
+.feedback__form textarea {
+  height: 130px;
+}
+
+.feedback__form form p   {
+  font-size: 12px;
+  color: #B0BDA8;
+}
+
+
+.feedback__form form a   {
+  color: #656F5F !important;
+}

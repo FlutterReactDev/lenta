@@ -1,0 +1,123 @@
+.container {
+  max-width: 1290px;
+  margin: 0 auto;
+}
+
+.button {
+  border-radius: 32px;
+  border: none;
+  background-color: #fff;
+  font-family: GolosBold;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.button--fill {
+  border-radius: 70px;
+  background-color: var(--orange-color);
+  color: #fff;
+}
+.button--fill:hover {
+  background-color: var(--orange-hover-color);
+}
+
+.button--empty {
+  background-color: transparent;
+  border-radius: 70px;
+  color: var(--orange-color);
+  border: 1px solid var(--orange-color);
+}
+.table {
+  text-align: center;
+  position: relative;
+  color: var(--dark-green);
+}
+
+.thead {
+  position: relative;
+}
+.thead::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #fff8d1;
+  border-radius: 32px;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  left: 0;
+}
+.table thead th {
+  border: none;
+}
+.table td,
+.table th {
+  border-top: none;
+}
+.table tbody tr {
+  border-bottom: 1px solid var(--light-green);
+}
+
+.table tbody tr td {
+  padding: 20px;
+}
+
+.pagination {
+  color: var(--dark-green);
+  justify-content: center;
+}
+.pagination__list {
+  list-style: none;
+  display: flex;
+  gap: 14px;
+}
+
+.pagination__list__item {
+  width: 48px;
+  height: 48px;
+  background-color: #fff8d1;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.pagination__list__item:hover {
+  background-color: var(--orange-color);
+  color: #fff;
+}
+
+.pagination__list__item--active {
+  background-color: var(--orange-color);
+  color: #fff;
+}
+
+input,
+textarea {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--grey-dark-color);
+  color: #534039;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 2px solid var(--green-color);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--grey-dark-color);
+}
+textarea {
+  resize: none;
+}
+input[type="checkbox"] {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
