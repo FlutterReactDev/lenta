@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Майонез, который впечатляет!</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/media.css">
+    
     <link rel="stylesheet" href="css/utils.css">
     <link rel="stylesheet" href="css/ui.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
 </head>
 
 <body>
@@ -66,11 +67,30 @@
                     </li>
                     <li class="header__list__item"><a href="#" class="header__list__item__link">Чат-бот</a></li>
                 </ul>
+                <div class="mobile__menu">
+                    <div class="hamburger">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                        <ul class="mobile__menu__list">
+                            <li class="header__list__item"><a href="#" class="header__list__item__link">Правила</a></li>
+                            <li class="header__list__item"><a href="#" class="header__list__item__link">Призы</a></li>
+                            <li class="header__list__item"><a href="#" class="header__list__item__link">Победители</a></li>
+                            <li class="header__list__item"><a href="#" class="header__list__item__link">Вопросы и ответы</a>
+                            </li>
+                            <li class="header__list__item"><a href="#" class="header__list__item__link">Чат-бот</a></li>
+                        </ul>
+                      </div>
+                  
+                </div>
                 <div class="header__user">
                     <button class="header__button button box-shadow">
                         <img src="images/header-user.svg" alt="" /> Личный кабинет
                     </button>
                 </div>
+
+              
+                   
             </nav>
         </div>
     </header>
@@ -81,8 +101,8 @@
                     <div class="hero__content">
                         <p>Срок акции: с 14 ноября 2022 по 18 декабря 2022 года</p>
                         <div class="hero__content__title">
-                            Точно<br />
-                            в твоем <br />
+                            Точно
+                            в твоем 
                             вкусе!
                         </div>
                         <div class="button button--fill hero__content__btn">Зарегистрировать чек</div>
@@ -97,6 +117,18 @@
         </div>
     </section>
     <section class="stock">
+        <div class="stock__blur-1">
+            <img src="images/stock-blur.svg"/>
+        </div>
+        <div class="stock__blur-2">
+            <img src="images/stock-blur-2.svg"/>
+        </div>
+        <div class="stock__crumb-1">
+            <img src="images/stock-crumb-1.svg"/>
+        </div>
+        <div class="stock__crumb-2">
+            <img src="images/stock-crumb-2.svg"/>
+        </div>
         <div class="container">
             <h1 class="stock__title header-1 text-center">Правила акции</h1>
             <div class="row">
@@ -149,6 +181,9 @@
 
     </section>
     <section class="prizes">
+        <div class="prizes__blur">
+            <img src="images/prize-blur.svg"/>
+        </div>
         <div class="container">
             <h1 class="header-1 text-center prizes__title">
                 Выигрывайте призы
@@ -160,10 +195,10 @@
                             Ежедневно разыгрывается один из:
                         </h4>
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-md-6">
                                 <img src="images/block_prize-1.png" />
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-md-6">
                                 <ul>
                                     <li>2 000 баллов на карту «Лента» - 35 шт</li>
                                     <li> Беспроводное зарядное устройство Accesstyle Bermuda 15W - 35 штук</li>
@@ -181,10 +216,10 @@
                             Еженедельно разыгрывается:
                         </h4>
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-md-6">
                                 <img src="images/block_prize-2.png" />
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-md-6">
                                 <ul>
                                     <li> 20 000 баллов на карту «Лента» – 5 штук</li>
                                     <li> Яндекс-станция Алиса - 5 штук</li>
@@ -211,14 +246,20 @@
     </section>
 
     <section class="winner">
+        <div class="winner__gift-big">
+            <img src="images/winner-gift-big.svg"/>
+        </div>
+        <div class="winner__gift-small">
+            <img src="images/winner-gift-small.svg"/>
+        </div>
         <div class="container">
             <h1 class="text-center header-1 winner__title">Победители</h1>
             <div class="winner__tab">
-                <div class="winner__tab__item winner__tab__item--active ">Ежедневный</div>
-                <div class="winner__tab__item ">Еженедельный</div>
-                <div class="winner__tab__item ">Суперприз</div>
+                <div class="winner__tab__item  " data-place="everyday">Ежедневный</div>
+                <div class="winner__tab__item " data-place="everyweekend">Еженедельный</div>
+                <div class="winner__tab__item " data-place="surprise">Суперприз</div>
             </div>
-            <div class="winner__data hAlign">
+            <div class="winner__data hAlign" data-place="everyday">
                 <table class="table ">
                     <thead class="thead br-32">
                         <tr>
@@ -261,20 +302,140 @@
                         </tr>
                     </tbody>
                 </table>
+                <div class="winner__pagination pagination hAlign">
+                    <ul class="pagination__list">
+                        <li class="pagination__list__item pagination__list__item--active">1</li>
+                        <li class="pagination__list__item">2</li>
+                        <li class="pagination__list__item">3</li>
+                        <li class="pagination__list__item">...</li>
+                        <li class="pagination__list__item">8</li>
+                    </ul>
+                </div>
             </div>
-            <div class="winner__pagination pagination hAlign">
-                <ul class="pagination__list">
-                    <li class="pagination__list__item pagination__list__item--active">1</li>
-                    <li class="pagination__list__item">2</li>
-                    <li class="pagination__list__item">3</li>
-                    <li class="pagination__list__item">...</li>
-                    <li class="pagination__list__item">8</li>
-                </ul>
+            <div class="winner__data hAlign" data-place="everyweekend">
+                <table class="table ">
+                    <thead class="thead br-32">
+                        <tr>
+                            <th>Дата розыгрыша</th>
+                            <th>Имя</th>
+                            <th>Город</th>
+                            <th>Номер телефона</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>12.11.2022</td>
+                            <td>В******</td>
+                            <td>Санкт-Петербург</td>
+                            <td>+7 (999) *** ** 99)</td>
+                        </tr>
+                        <tr>
+                            <td>12.11.2022</td>
+                            <td>В******</td>
+                            <td>Санкт-Петербург</td>
+                            <td>+7 (999) *** ** 99)</td>
+                        </tr>
+                        <tr>
+                            <td>12.11.2022</td>
+                            <td>В******</td>
+                            <td>Санкт-Петербург</td>
+                            <td>+7 (999) *** ** 99)</td>
+                        </tr>
+                        <tr>
+                            <td>12.11.2022</td>
+                            <td>В******</td>
+                            <td>Санкт-Петербург</td>
+                            <td>+7 (999) *** ** 99)</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                <div class="winner__pagination pagination hAlign">
+                    <ul class="pagination__list">
+                        <li class="pagination__list__item pagination__list__item--active">1</li>
+                        <li class="pagination__list__item">2</li>
+                        <li class="pagination__list__item">3</li>
+                        <li class="pagination__list__item">...</li>
+                        <li class="pagination__list__item">8</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="winner__data hAlign" data-place="surprise">
+                <table class="table ">
+                    <thead class="thead br-32">
+                        <tr>
+                            <th>Дата розыгрыша</th>
+                            <th>Имя</th>
+                            <th>Город</th>
+                            <th>Номер телефона</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>12.11.2022</td>
+                            <td>В******</td>
+                            <td>Санкт-Петербург</td>
+                            <td>+7 (999) *** ** 99)</td>
+                        </tr>
+                        <tr>
+                            <td>12.11.2022</td>
+                            <td>В******</td>
+                            <td>Санкт-Петербург</td>
+                            <td>+7 (999) *** ** 99)</td>
+                        </tr>
+                        <tr>
+                            <td>12.11.2022</td>
+                            <td>В******</td>
+                            <td>Санкт-Петербург</td>
+                            <td>+7 (999) *** ** 99)</td>
+                        </tr>
+                        <tr>
+                            <td>12.11.2022</td>
+                            <td>В******</td>
+                            <td>Санкт-Петербург</td>
+                            <td>+7 (999) *** ** 99)</td>
+                        </tr>
+                        <tr>
+                            <td>12.11.2022</td>
+                            <td>В******</td>
+                            <td>Санкт-Петербург</td>
+                            <td>+7 (999) *** ** 99)</td>
+                        </tr>
+                        <tr>
+                            <td>12.11.2022</td>
+                            <td>В******</td>
+                            <td>Санкт-Петербург</td>
+                            <td>+7 (999) *** ** 99)</td>
+                        </tr>
+                        <tr>
+                            <td>12.11.2022</td>
+                            <td>В******</td>
+                            <td>Санкт-Петербург</td>
+                            <td>+7 (999) *** ** 99)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="winner__pagination pagination hAlign">
+                    <ul class="pagination__list">
+                        <li class="pagination__list__item pagination__list__item--active">1</li>
+                        <li class="pagination__list__item">2</li>
+                        <li class="pagination__list__item">3</li>
+                        <li class="pagination__list__item">...</li>
+                        <li class="pagination__list__item">8</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
     <section class="feedback">
+        <div class="feedback__circle">
+            <img src="images/feedback-circle.svg"/>
+        </div>
         <div class="container br-32 box-shadow">
+            <div class="feedback__blur">
+                <img src="images/feedback-blur.svg"/>
+            </div>
+          
             <h1 class="text-center header-1 feedback__title">Вопросы и ответы</h1>
 
             <div class="row">
@@ -409,21 +570,84 @@
                                 <form>
                                     <input placeholder="Ваше имя" type="text" name="firstname"/>
                                     <input placeholder="Ваша фамилия" type="text" name="lastname"/>
-                                    <textarea placeholder="Текст сообщения">
-                                        
-                                    </textarea>
-
+                                    <textarea placeholder="Текст сообщения"></textarea>
                                     <p>
                                         <input type="checkbox"/>
                                         Поле для проставления отметки согласия на обработку <a>персональных данных </a> 
                                     </p>
-                                    
+                                    <button type="submit" class="feedback__form__btn button button--fill">
+                                        Задать вопрос
+                                    </button>
                                 </form>
                         </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <section class="bot">
+       
+        <div class="container">
+            <div class="bot__crumbs-1">
+                <img src="images/bot__crumbs-1.svg"/>
+            </div>
+            <div class="bot__crumbs-2">
+                <img src="images/bot_crumbs-2.svg"/>
+            </div>
+            <div class="bot__crumbs-3">
+                <img src="images/bot_crumbs-3.svg"/>
+            </div>
+             <h1 class="header-1 text-center bot__title">С чат-ботом участвовать проще!</h1>
+        
+            <p class="text-center bot__text">С «14» ноября 2022 года по «18» декабря 2022 года покупайте майонез ТМ «Махеевъ» в магазинах «Лента»<br/> и сохраняйте чеки. Сфотографируйте QR-код чека и загрузите его на сайте или в мессенджере</p>
+            <div class="bot__social">
+                <div class="bot__social__item">
+                    <div class="bot__social__item__icon">
+                        <img src="images/whatsapp-bot.svg"/>
+                    </div>
+                    <div class="bot__social__item__info">
+                        <h5 class="header-5 bot__social__item__title">Если используете WhatsApp</h5>
+                        <div class="bot__social__item__text">Если используете WhatsApp — добавить в «Rонтакты» телефона номер +7 968 042-29-66, найти в WhatsApp этот контакт и отправить ему любое сообщение,<br/> следовать дальнейшим инструкциям.</div>
+                    </div>
+                </div>
+                <div class="bot__social__item">
+                    <div class="bot__social__item__icon">
+                        <img src="images/telegram-bot.svg"/>
+                    </div>
+                    <div class="bot__social__item__info">
+                        <h5 class="header-5 bot__social__item__title">Если используете Telegram</h5>
+                        <div class="bot__social__item__text">найти по названию @kupi_maheev_bot,
+                            отправить любое собщение в бот и следовать дальнейшим инструкциям.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__blur__element">
+            <img src="images/footer-blur.svg"/>
+        </div>
+        <div class="footer__gift__big">
+            <img src="images/footer-gift-big.svg"/>
+        </div>
+        <div class="footer__gift__small">
+            <img src="images/footer-gift-small.svg"/>
+        </div>
+        <div class="container">
+            <p class="text-center">
+                Номер телефона горячей линии: 
+            </p>
+            <h1 class="footer__phone header-1 text-center">8-800-505-98-66</h1>
+            <ul class="footer__links">
+                <li><a href="#" >Вконтакте</a></li>
+                <li><a href="#" class="footer__links__email">info@kupi-maheev.ru</a> </li>
+                <li><a href="#" >Правила акции</a> </li>
+            </ul>
+            <p class="text-center">Общий срок проведения акции с 14 ноября 2022 по 14 февраля 2023 года. Срок регистрации участников в акции и регистрации чеков: с 14 ноября по 18 декабря 2022 года. Акция проводится в магазинах ТС «Лента». Правила акции, информацию об Организаторе акции, порядке и условиях её проведения можно узнать на сайте kupi-maheev.ru. Организатор акции – ООО «Ай-Экшн».
+            </p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/main.js"></script>
 </body>
 

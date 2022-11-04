@@ -11,6 +11,18 @@
 .header-1 {
   font-size: 62px;
 }
+
+@media screen and (max-width: 768px) {
+  .header-1 {
+    font-size: 52px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .header-1 {
+    font-size: 42px;
+  }
+}
+
 .header-2 {
   font-size: 42px;
 }
