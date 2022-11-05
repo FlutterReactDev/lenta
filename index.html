@@ -711,10 +711,14 @@
                                     <input placeholder="Ваше имя" type="text" name="firstname"/>
                                     <input placeholder="Ваша фамилия" type="text" name="lastname"/>
                                     <textarea placeholder="Текст сообщения"></textarea>
-                                    <p>
-                                        <input type="checkbox"/>
-                                        Поле для проставления отметки согласия на обработку <a>персональных данных </a> 
-                                    </p>
+                                    <div>
+                                        <input type="checkbox" id="checkbox"/>
+                                        <label for="checkbox">
+                                            <div class="checkbox-mark"> </div>
+                                            Поле для проставления отметки согласия на обработку <a>персональных данных</a>
+                                        </label>
+                                    </div>
+
                                     <button type="submit" class="feedback__form__btn button button--fill">
                                         Задать вопрос
                                     </button>
