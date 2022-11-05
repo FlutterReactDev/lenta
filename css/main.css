@@ -168,9 +168,6 @@ img {
   transform: rotate(45deg) translate(-6px, -8px);
 }
 
-
-
-
 .mobile__menu__list {
   display: none;
   position: absolute;
@@ -624,4 +621,50 @@ a.stock__card__mark {
   right: 108px;
   top: -78px;
   z-index: -1;
+}
+
+/*radio*/
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  position: relative;
+  padding-left:30px ;
+
+  margin-left: 10px;
+
+}
+
+.radio-mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--grey-color);
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.radio-active {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+}
+input[type="radio"]:checked + label .radio-mark{
+  background-color: var(--green-color);
+  border: none;
+}
+
+.group {
+  color: #333333;
+  margin: 22px 0;
+  padding-left: 20px;
 }

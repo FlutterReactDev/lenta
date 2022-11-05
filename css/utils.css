@@ -48,6 +48,17 @@
   border-radius: 32px;
 }
 
+.color--dark {
+  color: var(--dark-color);
+}
+
 .hAlign {
   margin: 0 auto;
+}
+
+
+.alignVertical {
+  display: flex;
+  align-items:center;
+  justify-content: center;
 }
