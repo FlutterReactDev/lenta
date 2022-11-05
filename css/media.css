@@ -3,9 +3,7 @@
   .header__logo {
     display: none;
   }
-  .mobile__menu {
-    display: block;
-  }
+ 
 }
 
 @media screen and (max-width: 992px) {
@@ -21,6 +19,9 @@
   .feedback .container {
     padding: 100px 50px;
   }
+  .feedback__blur {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -28,14 +29,15 @@
   .header__list {
     display: none;
   }
+  .mobile__menu {
+    display: block;
+  }
   /*prizes*/
   .prizes__bunner__img-2 {
     display: none;
   }
   /*feedback*/
-  .feedback__blur {
-    display: none;
-  }
+  
   /*footer*/
   .footer__links {
     gap: 0;
