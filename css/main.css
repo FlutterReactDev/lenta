@@ -58,6 +58,7 @@ button {
 
 .page__float__element {
   position: absolute;
+  z-index: -1;
 }
 
 .page__blur-1 {

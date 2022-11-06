@@ -1,3 +1,4 @@
+
 .container {
   max-width: 1290px;
   margin: 0 auto;
@@ -144,37 +145,7 @@ table.dataTable thead th {
   color: #fff !important;
   border: none;
 }
-.pagination {
-  color: var(--dark-green);
-  justify-content: center;
-}
-.pagination__list {
-  list-style: none;
-  display: flex;
-  gap: 14px;
-}
 
-.pagination__list__item {
-  width: 48px;
-  height: 48px;
-  background-color: #fff8d1;
-  display: flex;
-  justify-content: center;
-  border-radius: 50%;
-  align-items: center;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.pagination__list__item:hover {
-  background-color: var(--orange-color);
-  color: #fff;
-}
-
-.pagination__list__item--active {
-  background-color: var(--orange-color);
-  color: #fff;
-}
 
 input,
 textarea {
@@ -277,3 +248,19 @@ label {
   height: 68px;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 768px) {
+
+  .modal-content .modal-body {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .modal-content .modal-body {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+}
+

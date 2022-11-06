@@ -5,7 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
   table();
 
   $('button[data-target="#registration"]').on("click", function () {
-    modal();
+    $("#login").css({display:'none'})
+    $("#registration").on("hidden.bs.modal", function () {
+      $("#login").modal('hide')
+  });
   });
 });
 function tab() {
@@ -83,6 +86,6 @@ function table() {
 }
 
 function modal() {
-  $("#login").modal("hide");
-  $('body').css({overflow:'hidden'})
+  
+  
 }
