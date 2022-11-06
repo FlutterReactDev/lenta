@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   $('button[data-target="#registration"]').on("click", function () {
     $("#login").css({display:'none'})
-    $("#registration").on("hidden.bs.modal", function () {
+    $("#registration").on("hide.bs.modal", function () {
       $("#login").modal('hide')
   });
   });
