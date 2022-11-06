@@ -2,6 +2,11 @@ document.addEventListener("DOMContentLoaded", function () {
   mobileMenu();
   accardion();
   tab();
+  table();
+
+  $('button[data-target="#registration"]').on("click", function () {
+    modal();
+  });
 });
 function tab() {
   let switching = true;
@@ -59,8 +64,25 @@ function mobileMenu() {
 
     if ($(".mobile__menu").hasClass("open")) {
       $(".mobile__menu__list").show(400);
-    }else {
-        $(".mobile__menu__list").hide(400);
+    } else {
+      $(".mobile__menu__list").hide(400);
     }
   });
+}
+
+function table() {
+  $("#table-everyday").DataTable({
+    pageLength: 5,
+  });
+  $("#table-everyweekend").DataTable({
+    pageLength: 5,
+  });
+  $("#table-surprise").DataTable({
+    pageLength: 5,
+  });
+}
+
+function modal() {
+  $("#login").modal("hide");
+  $('body').css({overflow:'hidden'})
 }

@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Майонез, который впечатляет!</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    
+    <link rel="stylesheet" href="css/datatables.min.css">
+
     <link rel="stylesheet" href="css/ui.css">
     <link rel="stylesheet" href="css/utils.css">
     <link rel="stylesheet" href="css/main.css">
@@ -45,17 +46,21 @@
     <div class="page__float__element page__crumbs-blur">
         <img src="images/page-crumbs-blur.svg" />
     </div>
-    <!-- <div class="modal alignVertical modal-small">
-       
-        <div class="modal__content">
+
+
+    <div class="modal fade modal-login" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-small" role="document">
+          <div class="modal-content">
             <div class="modal__float modal__crumb">
                 <img src="images/modal-crumb.svg"/>
             </div>
             <div class="modal__float modal__blur"><img src="images/modal-blur.svg"/></div>
-            <div class="modal__close">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <img src="images/modal-close.svg"/>
+              </button>
             </div>
-            <div class="modal__dialog">
+            <div class="modal-body">
                 <h2 class="header-2 modal__title">
                     Вход
                 </h2>
@@ -66,25 +71,30 @@
                     <button  class="button button--fill modal-login__btn alignVertical">Войти</button>
                   
                 </form>
-                <p class="m-0">Если Вы впервые на сайте, то Вам необходимо</p>
-                <div class="header-5">Зарегистрироваться</div>
+                <p class="m-0 color--dark" >Если Вы впервые на сайте, то Вам необходимо</p>
+                <button class="header-5" data-toggle="modal" data-target="#registration">
+                 Зарегистрироваться
+               
+                </button>
             </div>
-            
+          </div>
         </div>
-    </div> -->
-
-    <!-- <div class="modal alignVertical modal-big">
-        
-        <div class="modal__content">
+      </div>
+    <div class="modal fade modal-login" id="registration" tabindex="-1" role="dialog" aria-labelledby="registration" aria-hidden="true">
+       
+        <div class="modal-dialog modal-dialog-centered modal-big" role="document">
+           
+          <div class="modal-content">
             <div class="modal__float modal__crumb">
                 <img src="images/modal-crumb.svg"/>
             </div>
             <div class="modal__float modal__blur"><img src="images/modal-blur.svg"/></div>
-            <div class="modal__close">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <img src="images/modal-close.svg"/>
+              </button>
             </div>
-
-            <div class="modal__dialog">
+            <div class="modal-body">
                 <h2 class="header-2 modal__title"  >Регистрация</h2>
 
                 <form>
@@ -155,19 +165,24 @@
                     <button type="submit" class="modal-registration__button button button--fill alignVertical">Зарегистрироваться</button>
                 </form>
             </div>
-           
+          </div>
         </div>
-    </div> -->
-    <!-- <div class="modal alignVertical modal-small">
-        <div class="modal__content">
+      </div>
+
+
+      <div class="modal fade modal-login" id="reset" tabindex="-1" role="dialog" aria-labelledby="reset" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-small" role="document">
+          <div class="modal-content">
             <div class="modal__float modal__crumb">
                 <img src="images/modal-crumb.svg"/>
             </div>
             <div class="modal__float modal__blur"><img src="images/modal-blur.svg"/></div>
-            <div class="modal__close">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <img src="images/modal-close.svg"/>
+              </button>
             </div>
-            <div class="modal__dialog">
+            <div class="modal-body">
                 <h2 class="header-3 modal__title">
                     Восстановление
 пароля
@@ -181,20 +196,21 @@
                 </form>
                 <p style="font-size: 14px;" class="m-0 color--dark">Пароль отправлен в СМС сообщении на указанный номер телефона.</p>
             </div>
-            
+          </div>
         </div>
-    </div> -->
-    
+      </div>
+      
     <header class="header">
         <div class="container">
             <nav class="header__nav">
                 <div class="header__logo">
                     <div class="header__logo__icon-1">
-                        <img src="images/logo-1.svg" alt="" />
+                         <a href="#"><img src="images/logo-1.svg" alt="" /></a>
                     </div>
 
                     <div class="header__logo__icon-2">
-                        <img src="images/logo-2.svg" alt="" />
+                        <a href="#">   <img src="images/logo-2.svg" alt="" /></a>
+                     
                     </div>
 
 
@@ -224,7 +240,7 @@
                   
                 </div>
                 <div class="header__user">
-                    <button class="header__button button box-shadow">
+                    <button data-toggle="modal" data-target="#login" class="header__button button box-shadow">
                         <img src="images/header-user.svg" alt="" /> Личный кабинет
                     </button>
                 </div>
@@ -399,8 +415,10 @@
                 <div class="winner__tab__item " data-place="everyweekend">Еженедельный</div>
                 <div class="winner__tab__item " data-place="surprise">Суперприз</div>
             </div>
-            <div class="winner__data hAlign" data-place="everyday">
-                <table class="table ">
+            <div class="winner__data hAlign"  data-place="everyday">
+                <table class="table " id="table-everyday"   
+                data-searching="false"
+                data-ordering="false">
                     <thead class="thead br-32">
                         <tr>
                             <th>Дата розыгрыша</th>
@@ -422,6 +440,7 @@
                             <td>Санкт-Петербург</td>
                             <td>+7 (999) *** ** 99)</td>
                         </tr>
+                       
                         <tr>
                             <td>12.11.2022</td>
                             <td>В******</td>
@@ -434,41 +453,7 @@
                             <td>Санкт-Петербург</td>
                             <td>+7 (999) *** ** 99)</td>
                         </tr>
-                        <tr>
-                            <td>12.11.2022</td>
-                            <td>В******</td>
-                            <td>Санкт-Петербург</td>
-                            <td>+7 (999) *** ** 99)</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="winner__pagination pagination hAlign">
-                    <ul class="pagination__list">
-                        <li class="pagination__list__item pagination__list__item--active">1</li>
-                        <li class="pagination__list__item">2</li>
-                        <li class="pagination__list__item">3</li>
-                        <li class="pagination__list__item">...</li>
-                        <li class="pagination__list__item">8</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="winner__data hAlign" data-place="everyweekend">
-                <table class="table ">
-                    <thead class="thead br-32">
-                        <tr>
-                            <th>Дата розыгрыша</th>
-                            <th>Имя</th>
-                            <th>Город</th>
-                            <th>Номер телефона</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>12.11.2022</td>
-                            <td>В******</td>
-                            <td>Санкт-Петербург</td>
-                            <td>+7 (999) *** ** 99)</td>
-                        </tr>
+                        
                         <tr>
                             <td>12.11.2022</td>
                             <td>В******</td>
@@ -490,18 +475,130 @@
                         
                     </tbody>
                 </table>
-                <div class="winner__pagination pagination hAlign">
-                    <ul class="pagination__list">
-                        <li class="pagination__list__item pagination__list__item--active">1</li>
-                        <li class="pagination__list__item">2</li>
-                        <li class="pagination__list__item">3</li>
-                        <li class="pagination__list__item">...</li>
-                        <li class="pagination__list__item">8</li>
-                    </ul>
-                </div>
+                
+            </div>
+            <div class="winner__data hAlign" data-place="everyweekend">
+                <table class="table " id="table-everyweekend"   
+                data-searching="false"
+                data-ordering="false">
+                    <thead class="thead br-32">
+                        <tr>
+                            <th>Дата розыгрыша</th>
+                            <th>Имя</th>
+                            <th>Город</th>
+                            <th>Номер телефона</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>12.11.2022</td>
+                            <td>В******</td>
+                            <td>Санкт-Петербург</td>
+                            <td>+7 (999) *** ** 99)</td>
+                        </tr>
+                        <tr>
+                            <td>12.11.2022</td>
+                            <td>В******</td>
+                            <td>Санкт-Петербург</td>
+                            <td>+7 (999) *** ** 99)</td>
+                        </tr>
+                  
+                        <tr>
+                            <td>12.11.2022</td>
+                            <td>В******</td>
+                            <td>Санкт-Петербург</td>
+                            <td>+7 (999) *** ** 99)</td>
+                        </tr>
+                        <tr>
+                            <td>12.11.2022</td>
+                            <td>В******</td>
+                            <td>Санкт-Петербург</td>
+                            <td>+7 (999) *** ** 99)</td>
+                        </tr>
+                        <tr>
+                            <td>12.11.2022</td>
+                            <td>В******</td>
+                            <td>Санкт-Петербург</td>
+                            <td>+7 (999) *** ** 99)</td>
+                        </tr>
+                        <tr>
+                            <td>12.11.2022</td>
+                            <td>В******</td>
+                            <td>Санкт-Петербург</td>
+                            <td>+7 (999) *** ** 99)</td>
+                        </tr>
+                        <tr>
+                            <td>12.11.2022</td>
+                            <td>В******</td>
+                            <td>Санкт-Петербург</td>
+                            <td>+7 (999) *** ** 99)</td>
+                        </tr>
+                        <tr>
+                            <td>12.11.2022</td>
+                            <td>В******</td>
+                            <td>Санкт-Петербург</td>
+                            <td>+7 (999) *** ** 99)</td>
+                        </tr>
+                        <tr>
+                            <td>12.11.2022</td>
+                            <td>В******</td>
+                            <td>Санкт-Петербург</td>
+                            <td>+7 (999) *** ** 99)</td>
+                        </tr>
+                        <tr>
+                            <td>12.11.2022</td>
+                            <td>В******</td>
+                            <td>Санкт-Петербург</td>
+                            <td>+7 (999) *** ** 99)</td>
+                        </tr>
+                      
+                        <tr>
+                            <td>12.11.2022</td>
+                            <td>В******</td>
+                            <td>Санкт-Петербург</td>
+                            <td>+7 (999) *** ** 99)</td>
+                        </tr>
+                      
+                        <tr>
+                            <td>12.11.2022</td>
+                            <td>В******</td>
+                            <td>Санкт-Петербург</td>
+                            <td>+7 (999) *** ** 99)</td>
+                        </tr>
+                        <tr>
+                            <td>12.11.2022</td>
+                            <td>В******</td>
+                            <td>Санкт-Петербург</td>
+                            <td>+7 (999) *** ** 99)</td>
+                        </tr>
+                        <tr>
+                            <td>12.11.2022</td>
+                            <td>В******</td>
+                            <td>Санкт-Петербург</td>
+                            <td>+7 (999) *** ** 99)</td>
+                        </tr>
+                        <tr>
+                            <td>12.11.2022</td>
+                            <td>В******</td>
+                            <td>Санкт-Петербург</td>
+                            <td>+7 (999) *** ** 99)</td>
+                        </tr>
+                        <tr>
+                            <td>12.11.2022</td>
+                            <td>В******</td>
+                            <td>Санкт-Петербург</td>
+                            <td>+7 (999) *** ** 99)</td>
+                        </tr>
+                       
+
+                    </tbody>
+                </table>
+                
             </div>
             <div class="winner__data hAlign" data-place="surprise">
-                <table class="table ">
+                <table class="table " id="table-surprise"   
+                data-searching="false"
+                data-ordering="false">
                     <thead class="thead br-32">
                         <tr>
                             <th>Дата розыгрыша</th>
@@ -555,15 +652,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <div class="winner__pagination pagination hAlign">
-                    <ul class="pagination__list">
-                        <li class="pagination__list__item pagination__list__item--active">1</li>
-                        <li class="pagination__list__item">2</li>
-                        <li class="pagination__list__item">3</li>
-                        <li class="pagination__list__item">...</li>
-                        <li class="pagination__list__item">8</li>
-                    </ul>
-                </div>
+                
             </div>
         </div>
     </section>
@@ -715,7 +804,7 @@
                                         <input type="checkbox" id="checkbox"/>
                                         <label for="checkbox">
                                             <div class="checkbox-mark"> </div>
-                                            Поле для проставления отметки согласия на обработку <a>персональных данных</a>
+                                            Поле для проставления отметки согласия на обработку <a href="#">персональных данных</a>
                                         </label>
                                     </div>
 
@@ -781,7 +870,10 @@
             <p class="text-center">
                 Номер телефона горячей линии: 
             </p>
-            <h1 class="footer__phone header-1 text-center">8-800-505-98-66</h1>
+            <h1 class="footer__phone header-1 text-center">
+                <a href="tel:8-800-505-98-66">8-800-505-98-66</a>
+                
+            </h1>
             <ul class="footer__links">
                 <li><a href="#" >Вконтакте</a></li>
                 <li><a href="#" class="footer__links__email">info@kupi-maheev.ru</a> </li>
@@ -792,6 +884,8 @@
         </div>
     </footer>
     <script src="js/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="js/datatables.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 

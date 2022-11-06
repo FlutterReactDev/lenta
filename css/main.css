@@ -34,7 +34,9 @@ body {
 a {
   text-decoration: none;
 }
-
+a:hover {
+ text-decoration: none;
+}
 ul,
 li {
   padding: 0;
@@ -46,6 +48,12 @@ img {
   height: auto;
 }
 
+
+button {
+  border: none;
+  background: none;
+  padding: 0;
+}
 /*-----page float elements---- */
 
 .page__float__element {
@@ -216,10 +224,12 @@ img {
 
 .stock__blur-1 {
   position: absolute;
+  z-index: -1;
 }
 .stock__blur-2 {
   position: absolute;
   right: 0;
+  z-index: -1;
 }
 
 .stock__crumb-1 {
@@ -437,6 +447,7 @@ a.stock__card__mark {
   border: 2px solid var(--light-green);
   padding: 18px 27px;
   margin-bottom: 15px;
+  cursor: pointer;
 }
 
 .feedback__accardion--active .accardion__icon__icon-open {
@@ -594,6 +605,10 @@ a.stock__card__mark {
 
 .footer__phone {
   color: var(--green-color);
+}
+
+.footer__phone a  {
+  color: inherit;
 }
 .footer__links {
   display: flex;
