@@ -396,7 +396,9 @@ a.stock__card__mark {
   margin-bottom: 29px;
   font-family: GolosBold;
 }
-
+.winner__tab.nav {
+  flex-wrap: nowrap;
+}
 .winner__tab__item {
   color: var(--dark-green);
   width: 233px;
