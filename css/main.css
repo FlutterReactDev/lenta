@@ -407,7 +407,7 @@ a.stock__card__mark {
   cursor: pointer;
 }
 
-.winner__tab__item--active {
+.winner__tab__item.active {
   box-shadow: 0px 4px 92px #ffe19f;
   color: var(--green-color);
   border-radius: 32px;
