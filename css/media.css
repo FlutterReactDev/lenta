@@ -22,6 +22,10 @@
   .feedback__blur {
     display: none;
   }
+  /*bot*/
+  .bot__social__item:first-child::after {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 768px) {
