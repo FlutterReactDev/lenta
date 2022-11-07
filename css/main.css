@@ -216,6 +216,10 @@ button {
   justify-content: center;
   align-items: center;
 }
+.hero__content__btn:hover {
+  color: #fff;
+}
+
 
 /*--------stock-----------*/
 .stock {
