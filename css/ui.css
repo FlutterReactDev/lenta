@@ -146,22 +146,23 @@ table.dataTable thead th {
   border: none;
 }
 
-input,
+.input,
 textarea {
   width: 100%;
   border-radius: 10px;
-  border: 1px solid var(--grey-dark-color);
+  border: 2px solid var(--grey-dark-color);
   color: #534039;
   padding: 17px;
   margin-bottom: 16px;
 }
-input:focus,
+.input:focus,
 textarea:focus {
   outline: none;
   border: 2px solid var(--green-color);
+  box-shadow: 0 0 0px 1px var(--green-color);
 }
 
-input::placeholder,
+.input::placeholder,
 textarea::placeholder {
   color: var(--grey-dark-color);
 }

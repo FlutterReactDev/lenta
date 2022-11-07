@@ -52,6 +52,14 @@
   color: var(--dark-color);
 }
 
+.color--grey {
+  color: var(--grey-dark-color);
+}
+
+.color-green {
+  color: var(--green-color);
+}
+
 .hAlign {
   margin: 0 auto;
 }

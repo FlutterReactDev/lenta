@@ -10,6 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
       $("#login").modal('hide')
   });
   });
+
+  $('#datepicker').datepicker({
+    orientation: 'bottom'
+})
 });
 
 function accardion() {
