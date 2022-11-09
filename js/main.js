@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   mobileMenu();
   accardion();
 
-  table();
+ 
 
   $('button[data-target="#registration"]').on("click", function () {
     $("#login").css({ display: "none",opacity:0 });
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   $(".datepicker").datepicker({
     orientation: "bottom",
   });
-
+  table();
 
 });
 
