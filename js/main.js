@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   mobileMenu();
-  accardion();
+ 
 
  
 
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     orientation: "bottom",
   });
   table();
-
+  accardion();
 });
 
 function accardion() {
