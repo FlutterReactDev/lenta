@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Майонез, который впечатляет!</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/datatables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/ui.css">
+    <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+    <div class="page__float__element page__blur-1">
+        <img src="images/page-blur-1.svg" />
+    </div>
+    <div class="page__float__element page__blur-2">
+        <img src="images/page-blur-2.svg" />
+    </div>
+    <div class="page__float__element page__crumbs-1">
+        <img src="images/page-crumbs-1.svg" />
+    </div>
+    <div class="page__float__element page__crumbs-2">
+        <img src="images/page-crumbs-2.svg" />
+    </div>
+    <div class="page__float__element page__crumbs-3">
+        <img src="images/page-crumbs-3.svg" />
+    </div>
+    <div class="page__float__element page__crumbs-4">
+        <img src="images/page-crumbs-4.svg" />
+    </div>
+    <div class="page__float__element page__crumbs-5">
+        <img src="images/page-crumbs-5.svg" />
+    </div>
+    <div class="page__float__element page__crumbs-6">
+        <img src="images/page-crumbs-6.svg" />
+    </div>
+    <div class="page__float__element page__gift-blur">
+        <img src="images/page-gift-blur.svg" />
+    </div>
+    <div class="page__float__element page__crumbs-blur">
+        <img src="images/page-crumbs-blur.svg" />
+    </div>
+    <header class="header">
+        <div class="container">
+            <nav class="header__nav">
+                <div class="header__logo">
+                    <div class="header__logo__icon-1">
+                         <a href="#"><img src="images/logo-1.svg" alt="" /></a>
+                    </div>
+
+                    <div class="header__logo__icon-2">
+                        <a href="#">   <img src="images/logo-2.svg" alt="" /></a>
+                     
+                    </div>
+
+
+                </div>
+                <ul class="header__list">
+                    <li class="header__list__item"><a href="#" class="header__list__item__link">Правила</a></li>
+                    <li class="header__list__item"><a href="#" class="header__list__item__link">Призы</a></li>
+                    <li class="header__list__item"><a href="#" class="header__list__item__link">Победители</a></li>
+                    <li class="header__list__item"><a href="#" class="header__list__item__link">Вопросы и ответы</a>
+                    </li>
+                    <li class="header__list__item"><a href="#" class="header__list__item__link">Чат-бот</a></li>
+                </ul>
+                <div class="mobile__menu">
+                    <div class="hamburger">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                        <ul class="mobile__menu__list">
+                            <li class="header__list__item"><a href="#" class="header__list__item__link">Правила</a></li>
+                            <li class="header__list__item"><a href="#" class="header__list__item__link">Призы</a></li>
+                            <li class="header__list__item"><a href="#" class="header__list__item__link">Победители</a></li>
+                            <li class="header__list__item"><a href="#" class="header__list__item__link">Вопросы и ответы</a>
+                            </li>
+                            <li class="header__list__item"><a href="#" class="header__list__item__link">Чат-бот</a></li>
+                        </ul>
+                      </div>
+                  
+                </div>
+                <div class="header__user">
+                    <button class="text-success mr-4" >
+                        <img class="mr-1" src="images/header-user.svg" alt="" /> Александр
+                    </button>
+
+                    <button class="text-danger">
+                        Выйти
+                    </button>
+                </div>
+
+              
+                   
+            </nav>
+        </div>
+    </header>
+    <section class="cabinet">
+        <div class="container">
+            <h1 class="text-center header-1 cabinet__title">Личный кабинет</h1>
+            <div class="cabinet__tab nav" id="nav-tab" role="tablist">
+                <div class="cabinet__tab__item br-32 alignVertical box-shadow active" id="nav-registration-check-tab" data-toggle="tab" href="#registration-check" role="tab" aria-controls="registration check" aria-selected="true">Зарегистрировать чек
+                </div>
+                <div class="cabinet__tab__item br-32 alignVertical box-shadow"  id="nav-applications-draws-tab" data-toggle="tab" href="#applications-draws" role="tab" aria-controls="applications-draws" aria-selected="false">Заявки на розыгрыши
+                </div>
+                <div class="cabinet__tab__item br-32 alignVertical box-shadow" id="nav-my-prizes-tab" data-toggle="tab" href="#my-prizes" role="tab" aria-controls="my-prizes" aria-selected="false">Мои призы
+                </div>
+                <div class="cabinet__tab__item br-32 alignVertical box-shadow" id="nav-personal-info-tab" data-toggle="tab" href="#personal-info" role="tab" aria-controls="personal-info" aria-selected="false">Персональные данные
+
+                </div>
+            </div>
+
+            <div class="tab-content cabinet-content br-32" id="nav-tabContent">
+
+                <div class="cabinet__content hAlign fade active show " id="registration-check">
+                    <h2 class="text-center header-2 cabinet__content__title color--dark">Зарегистрировать чек</h2>
+                    <p class="text-center color--grey"> <img class="mr-2" src="images/time.svg"/> Проверка чека занимает до 3-х рабочих дней</p>
+                        <div class="registration__step text-center">
+                            <div class="step br-32">Шаг 1. Загрузите фото</div>
+                            
+                        </div>
+
+                        <div class="tab-content">
+                            <div  class="registration__check-2 fade show active">
+                                <div class="row mt-5">
+                                    <div class="col-md-6 justify-content-end">
+                                        <div class="photo-upload alignVertical">
+                                            <div class="text-center "> <img src="images/image-upload.svg"/>
+                                                <h4 class="header-4 mt-4">Загрузить фото чека</h4></div>
+                                           
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5 class="header-5 mt-2">К регистрации в Акции принимаются чеки, если:</h5>
+                                        <ul class="color--dark fs-14 pl-4"> 
+                                            <li> фото чека качественное, чек сфотографирован полностью, не стоит загружать фотографию только QR-кода</li>
+                                            <li>данные, указанные на чеке, такие как дата покупки, время покупки, итого по сумме чека, №ФН, №ФД, №ФПД введены правильно</li>
+                                            <li>кассовый чек должен быть выбит кассиром в период c с 14.11.2022 по 18.12.2022</li>
+                                            <li>все символы должны быть четко видны</li>
+                                            <li>
+        
+                                                наличие QR-кода на кассовом чеке обязательно, он должен быть читаемый</li>
+                                            <li>в чеке должно отображаться наименование Акционной продукции</li>
+                                        </ul>
+                                    </div>
+                                </div>
+        
+                                <div class="text-center mt-4 nav">
+                                    <button data-toggle="tab" href="#registration__check-1" class="hAlign button button--fill registration-btn">Далее</button>
+                                </div>
+        
+                            </div>
+                          
+                            <div id="registration__check-1" class="registration__check-1 hAlign mt-5 fade">
+                                <div class="image-upload mb-5">
+                                    <div class="image__type nav mb-4">
+                                        <div class="type__photo br-32 active color--dark" data-toggle="tab" href="#photo">Фото</div>   
+                                        <div class="type__camera br-32 color--dark"  data-toggle="tab" href="#camera">Камера</div>     
+                                    </div>
+                                    <div class="tab-content ">
+                                        <div class="image__view hAlign fade show active" id="photo">   
+                                    
+                                        </div>
+                                        <div class="image__view hAlign fade" id="camera">   
+                                          
+                                        </div>
+                                    </div>
+                                  <div class="image-upload__range mt-4 d-flex justify-content-center">
+                                    <input  type="range" min="1" max="100" step="1" value="15">
+                                  </div>
+    
+                            </div>
+                            <h5 class="header-5 color--dark text-center mb-3">Если QR-код не распознается и фискальные признаки не считываются,<br/> то введите данные вручную.</h5>
+                              <div class="text-center registration__step__subtitle mb-4">
+                                <a href="#" class=" td-dot d-inline-block ">Где найти фискальные данные на чеке?</a>
+                              </div>
+                              <form>
+                                <div class="form-row ">
+                                    <div class="col-sm-4">
+                                        <input placeholder="№ ФН" class="input form-control" type="text"/>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <input placeholder="№ ФД" class="input form-control" type="text"/>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <input placeholder="№ ФПД" class="input form-control" type="text"/>
+                                    </div>
+                                </div>
+    
+                                <div class="form-row ">
+                                    <div class="col-sm-4"> <input placeholder="Сумма покупки" class="input form-control" type="text"/></div>
+                                    <div class="col-sm-4"> <input placeholder="Дата покупки"  class="input form-control datepicker" type="text"/></div>
+                                    <div class="col-sm-4"> <input placeholder="Время покупки" class="input form-control" type="text"/></div>
+                                </div>
+                              </form>
+                            </div>
+                        </div>
+                        
+                      
+                        
+                        <h2 class="header-2 text-center registration__check">Зарегистрированные чеки</h2>
+                   
+                   
+                        <table class="table" id="table-registration-check"    data-searching="false"
+                    data-ordering="false">
+
+                   <thead class="thead br-32">
+                            <tr>
+                                <th>Дата и время чека</th>
+                                <th>Номер чека</th>
+                                <th>ФН,ФД, ФПД</th>
+                                <th>Фото чека</th>
+                                <th>Статус</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>20.02.2020, 16:30</td>
+                                <td>№12755246</td>
+                                <td>383732 / 344546 / ......</td>
+                                <td><a href="#" class="td-dot">Смотреть</a></td>
+                                <td> <div class="status status-reject">
+                                    Отклонено
+                                </div></td>
+                            </tr>     
+                            <tr>
+                                <td>20.02.2020, 16:30</td>
+                                <td>№12755246</td>
+                                <td>383732 / 344546 / ......</td>
+                                <td><a href="#" class="td-dot">Смотреть</a></td>
+                                <td><div class="status status-confirm">
+                                    Подтвержден
+                                </div></td>
+                            </tr>     
+                            <tr>
+                                <td>20.02.2020, 16:30</td>
+                                <td>№12755246</td>
+                                <td>383732 / 344546 / ......</td>
+                                <td><a href="#" class="td-dot">Смотреть</a></td>
+                                <td><div class="status status-process">
+                                    В процессе
+                                </div></td>
+                            </tr>     
+                            <tr>
+                                <td>20.02.2020, 16:30</td>
+                                <td>№12755246</td>
+                                <td>383732 / 344546 / ......</td>
+                                <td><a href="#" class="td-dot">Смотреть</a></td>
+                                <td><div class="status status-confirm">
+                                    Подтвержден
+                                </div></td>
+                            </tr>     
+                            <tr>
+                                <td>20.02.2020, 16:30</td>
+                                <td>№12755246</td>
+                                <td>383732 / 344546 / ......</td>
+                                <td><a href="#" class="td-dot">Смотреть</a></td>
+                                <td><div class="status status-reject">
+                                    Отклонено
+                                </div></td>
+                            </tr>     
+                            <tr>
+                                <td>20.02.2020, 16:30</td>
+                                <td>№12755246</td>
+                                <td>383732 / 344546 / ......</td>
+                                <td><a href="#" class="td-dot">Смотреть</a></td>
+                                <td><div class="status status-confirm">
+                                    Подтвержден
+                                </div></td>
+                            </tr>     
+                            <tr>
+                                <td>20.02.2020, 16:30</td>
+                                <td>№12755246</td>
+                                <td>383732 / 344546 / ......</td>
+                                <td><a href="#" class="td-dot">Смотреть</a></td>
+                                <td><div class="status status-reject">
+                                    Отклонено
+                                </div></td>
+                            </tr>     
+                        </tbody>
+                </table>
+                </div> 
+
+                <div class="cabinet__content hAlign fade applications-draws" id="applications-draws">
+                    <h2 class="text-center header-2 cabinet__content__title color--dark">Заявки на розыгрыши
+                    </h2>
+
+                    <table class="table"  id="table-applications-draws"    data-searching="false"
+                    data-ordering="false">
+
+                   <thead class="thead br-32">
+                            <tr>
+                                <th>Дата формирования</th>
+                                <th>Номер заявки</th>
+                                <th>Ежедневный</th>
+                                <th>Еженедельный</th>
+                                <th>Ежемесячный</th>
+                                <th>Суперприз</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>20.02.2020</td>
+                                <td>№4567000</td>
+                                <td><div class="text-danger"> Не выиграла</div>
+                                </td>
+                                <td>30.10.2022</td>
+                               
+                                <td>30.10.2022</td>
+                                <td>06.12.2022</td>
+                            </tr>     
+                            <tr>
+                                <td>20.02.2020</td>
+                                <td>№4567000</td>
+                                <td>-
+                                </td>
+                                <td><div class="text-success">Сертификат</div></td>
+                               
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>  
+                            <tr>
+                                <td>20.02.2020</td>
+                                <td>№4567000</td>
+                                <td>Не выиграла
+                                </td>
+                                <td>30.10.2022</td>
+                               
+                                <td>30.10.2022</td>
+                                <td>06.12.2022</td>
+                            </tr>  
+                        </tbody>
+                </table>
+                </div>
+
+                <div class="cabinet__content hAlign fade " id="my-prizes">
+                    <h2 class="text-center header-2 cabinet__content__title color--dark">
+                        Мои призы
+                    </h2>
+                    
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">  
+                             <div class="prize__card br-32">
+                            <div class="prize__img text-center mb-5">
+                                 <img src="images/prize-img-1.png"/>
+                            </div>
+                            <h6 class="header-6 text-center mb-5"> 2 000 баллов на карту «Лента»</h6>
+                            <p class="text-center color--grey  mb-4" >Дата розыгрыша: 22.12.2022</p>
+                            <div class="text-center tooltip-info"> 
+                                <button class="button button--empty prize__btn">Заполнить данные</button>
+                                <div class="button-tooltip  fs-14 text-left">
+                                    Заполните запрашиваемые поля во вкладке «Персональные данные». Только после получения необходимой информации мы сможем доставить Вам приз.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prize__card br-32">
+                            <div class="prize__img text-center mb-5">
+                                 <img src="images/prize-img-1.png"/>
+                            </div>
+                            <h6 class="header-6 text-center mb-5"> 2 000 баллов на карту «Лента»</h6>
+                            <p class="text-center color--grey  mb-4" >Дата розыгрыша: 22.12.2022</p>
+                            <div class="text-center tooltip-info"> 
+                                <button class="button button--empty prize__btn">Заполнить данные</button>
+                                <div class="button-tooltip  fs-14 text-left">
+                                    Заполните запрашиваемые поля во вкладке «Персональные данные». Только после получения необходимой информации мы сможем доставить Вам приз.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prize__card br-32">
+                            <div class="prize__img text-center mb-5">
+                                 <img src="images/prize-img-1.png"/>
+                            </div>
+                            <h6 class="header-6 text-center mb-5"> 2 000 баллов на карту «Лента»</h6>
+                            <p class="text-center color--grey  mb-4" >Дата розыгрыша: 22.12.2022</p>
+                            <div class="text-center tooltip-info"> 
+                                <button class="button button--empty prize__btn">Заполнить данные</button>
+                                <div class="button-tooltip  fs-14 text-left">
+                                    Заполните запрашиваемые поля во вкладке «Персональные данные». Только после получения необходимой информации мы сможем доставить Вам приз.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     
+                    <div class="col-md-6 col-lg-4">  
+                        <div class="prize__card br-32">
+                       <div class="prize__img text-center mb-5">
+                            <img src="images/prize-img-1.png"/>
+                       </div>
+                       <h6 class="header-6 text-center mb-5"> 2 000 баллов на карту «Лента»</h6>
+                       <p class="text-center color--grey  mb-4" >Дата розыгрыша: 22.12.2022</p>
+                       <div class="text-center tooltip-info"> 
+                           <button class="button button--empty prize__btn">Заполнить данные</button>
+                           <div class="button-tooltip  fs-14 text-left">
+                               Заполните запрашиваемые поля во вкладке «Персональные данные». Только после получения необходимой информации мы сможем доставить Вам приз.
+                           </div>
+                       </div>
+                   </div>
+                   <div class="prize__card br-32">
+                       <div class="prize__img text-center mb-5">
+                            <img src="images/prize-img-1.png"/>
+                       </div>
+                       <h6 class="header-6 text-center mb-5"> 2 000 баллов на карту «Лента»</h6>
+                       <p class="text-center color--grey  mb-4" >Дата розыгрыша: 22.12.2022</p>
+                       <div class="text-center tooltip-info"> 
+                           <button class="button button--empty prize__btn">Заполнить данные</button>
+                           <div class="button-tooltip  fs-14 text-left">
+                               Заполните запрашиваемые поля во вкладке «Персональные данные». Только после получения необходимой информации мы сможем доставить Вам приз.
+                           </div>
+                       </div>
+                   </div>
+                   <div class="prize__card br-32">
+                       <div class="prize__img text-center mb-5">
+                            <img src="images/prize-img-1.png"/>
+                       </div>
+                       <h6 class="header-6 text-center mb-5"> 2 000 баллов на карту «Лента»</h6>
+                       <p class="text-center color--grey  mb-4" >Дата розыгрыша: 22.12.2022</p>
+                       <div class="text-center tooltip-info"> 
+                           <button class="button button--empty prize__btn">Заполнить данные</button>
+                           <div class="button-tooltip  fs-14 text-left">
+                               Заполните запрашиваемые поля во вкладке «Персональные данные». Только после получения необходимой информации мы сможем доставить Вам приз.
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-md-6 col-lg-4 ">  
+                <div class="prize__card br-32">
+               <div class="prize__img text-center mb-5">
+                    <img src="images/prize-img-1.png"/>
+               </div>
+               <h6 class="header-6 text-center mb-5"> 2 000 баллов на карту «Лента»</h6>
+               <p class="text-center color--grey  mb-4" >Дата розыгрыша: 22.12.2022</p>
+               <div class="text-center tooltip-info"> 
+                   <button class="button button--empty prize__btn">Заполнить данные</button>
+                   <div class="button-tooltip  fs-14 text-left">
+                       Заполните запрашиваемые поля во вкладке «Персональные данные». Только после получения необходимой информации мы сможем доставить Вам приз.
+                   </div>
+               </div>
+           </div>
+           <div class="prize__card br-32">
+               <div class="prize__img text-center mb-5">
+                    <img src="images/prize-img-1.png"/>
+               </div>
+               <h6 class="header-6 text-center mb-5"> 2 000 баллов на карту «Лента»</h6>
+               <p class="text-center color--grey  mb-4" >Дата розыгрыша: 22.12.2022</p>
+               <div class="text-center tooltip-info"> 
+                   <button class="button button--empty prize__btn">Заполнить данные</button>
+                   <div class="button-tooltip  fs-14 text-left">
+                       Заполните запрашиваемые поля во вкладке «Персональные данные». Только после получения необходимой информации мы сможем доставить Вам приз.
+                   </div>
+               </div>
+           </div>
+          
+       </div>
+                    </div>
+                    <div class="no-prize">
+                        <div class="no-prize__title text-center">Вы еще не выиграли призов</div>
+                        <p class="text-center color--dark"> Регистрируйте больше чеков чтобы повысить свои шансы</p>
+                        
+                            <a href="#" class="hAlign button button--fill hero__content__btn mt-5">Зарегистрировать чек</a>
+                      
+                       
+                    </div>
+
+                    <div class="toaster success">
+                        <div class="toaster__icon alignVertical">
+                            !
+                        </div>
+                        <div class="toaster__text">
+                            Поздравляем! Вы выграли приз, заполните Персональные данные для получения
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cabinet__content hAlign fade " id="personal-info">
+                  <h2 class="text-center header-2 cabinet__content__title color--dark">Персональные данные</h2>
+                
+                    <div class="personal-info__container hAlign">
+                    <div class="message-warm d-flex align-items-center justify-content-center flex-wrap">
+                        <div class="message-warm__icon alignVertical ">
+                            !
+                        </div>    
+                        <p class="message-warm__text">
+                            Для получения приза Вам необходимо заполнить персональные данные. Эти данные, в соответствии с законом, требуются для уплаты налогов при получении призов, общая стоимость которых превышает 4000 рублей. 
+                        </p>
+                    </div>
+
+
+                    <div class="data-status expectation d-flex justify-content-center">
+                        <img src="images/time.svg"/>
+                        <div class="data-status__title">  Ваши данные находятся на проверке</div>
+                      
+                    </div>
+                    <div class="data-status correct d-flex justify-content-center">
+                        <img src="images/correct-icon.svg"/>
+                        <div class="data-status__title">
+                        Персональные данные подтверждены
+                    </div>
+                    </div>
+                    <div class="data-status reject d-flex align-items-center flex-column" >
+                    
+                    <div class="d-flex ">
+                        <img src="images/reject-icon.svg"/>
+                        <div class="data-status__title"> 
+                            Персональные данные не подтверждены
+                            </div>
+                        </div>
+                            <div class="data-status__subtitle text-center"> 
+                            Проверьте данные и отправьте заново или обратитесь <br/>
+                            в клиентскую поддержку
+                            </div>
+                   
+                  
+                </div>
+                    <div class="personal-info__inner">
+                        <h3 class="header-3 personal-info__title mb-4">Регистрационные данные:</h3>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input class="form-control input" type="text" name="text" placeholder="Фамилия"/>
+                                    <input  class="form-control input" type="text" name="text" placeholder="Петров"/>
+                                    <input  class="form-control input datepicker"  type="text" name="text" placeholder="Дата рождения"/>
+                                    <input  class="form-control input" type="text" name="text" placeholder="Номер телефона"/>
+                                </div>
+                                <div class="col-md-6">
+                                    <input  class="form-control input"  type="text" name="text" placeholder="Имя"/>
+                                    
+                                    <div class="group">
+                                        Пол:
+                                        <input type="radio" id="male" name="sex" >
+                                        <label for="male">
+                                            <div class="radio-mark ">
+                                                <div class="radio-active" ></div>
+                                            </div>
+                                           Муж.
+                                        </label>
+                                        <input type="radio" id="famale" name="sex" >
+                                        <label for="famale">
+                                            <div class="radio-mark ">
+                                                <div class="radio-active" ></div>
+                                            </div>
+                                           
+                                            Жен.
+                                        </label>
+                                    </div>
+                                   
+        
+                                    <input  class="form-control input" type="text" name="text" placeholder="Город проживания"/>
+                                    <input  class="form-control input" type="email" name="text" placeholder="E-mail"/>
+                                </div>
+        
+                    
+                            </div>
+        
+                            <button type="submit" class="modal-registration__button button button--fill alignVertical">Сохранить данные</button>
+                        </form>
+
+                        <h3 class="header-3 personal-info__title mb-4">Данные для уплаты налогов:</h3>
+                        <form>
+                            <h4 class="header-4 color--dark form__text">Первая страница паспорта</h4>
+                            <div class="form-row">
+                                <div class="col-md-4">
+                                    <input placeholder="Серия" class="form-control input" type="text"/>
+                                </div>
+                                <div class="col-md-4">
+                                    <input placeholder="Номер"  class="form-control input" type="text"/>
+                                </div>
+                                <div class="col-md-4">
+                                    <input placeholder="Дата выдачи" class="form-control input datepicker" type="text"/>
+                                </div>
+                            </div>
+                            <input class="form-control input mw-100" type="text" placeholder="Кем выдан"/>
+                            <h4 class="header-4 color--dark form__text">Адрес прописки</h4>
+
+                            <div class="form-row">
+                                <div class="col-md-6">
+                                    <input placeholder="Город" class="form-control input mw-100" type="text"/>
+                                </div>
+                                <div class="col-md-6">
+                                    <input placeholder="Улица"  class="form-control input mw-100" type="text"/>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-4">
+                                    <input placeholder="№ дома" class="form-control input" type="text"/>
+                                </div>
+                                <div class="col-md-4">
+                                    <input placeholder="№ корпуса"  class="form-control input" type="text"/>
+                                </div>
+                                <div class="col-md-4">
+                                    <input placeholder="№ квартиры"  class="form-control input" type="text"/>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="file" id="passport">
+                                    <label class="passport-input " for="passport">
+                                        <img src="images/upload-icon.svg" />
+                                        Загрузить файл
+                                    </label>
+                                    <p class="fs-14 color--black">Фото паспорта лицевая сторона</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="passport-photo text-center">
+                                        Фото паспорта
+                                        <img src="images/delete.svg"/>
+                                    </div>
+                                    <p class="fs-14 color--black">Фото паспорта, прописка</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input class="form-control input" placeholder="ИНН" type="text">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="file" id="photo">
+                                    <label class="passport-input " for="photo">
+                                        <img src="images/upload-icon.svg" />
+                                        Загрузить файл
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="submit" class="modal-registration__button button button--fill alignVertical">Сохранить данные</button>
+                        </form>
+                        <h3 class="header-3 personal-info__title mb-4">Адрес доставки:</h3>
+
+                        <form>
+                            <div class="form-row">
+                                <div class="col-md-6">
+                                    <input class="form-control input mw-100" type="text" placeholder="Населенный пункт"/>
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="form-control input mw-100" type="text" placeholder="Улица"/>
+                                </div>
+                               
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-4">
+                                    <input class="form-control input" type="text" placeholder="№ дома"/>
+                                </div>
+                                <div class="col-md-4">
+                                    <input class="form-control input" type="text" placeholder="№ корпуса"/>
+                                </div>
+                                <div class="col-md-4">
+                                    <input class="form-control input" type="text" placeholder="№ квартиры"/>
+                                </div>
+                            </div>
+                            <button type="submit" class="modal-registration__button button button--fill alignVertical">Сохранить данные</button>
+                        </form>
+
+                    </div>
+
+                    </div>
+                 
+                </div>
+            </div>
+           
+
+
+
+        </div>
+
+    </section>
+    
+    <footer class="footer">
+        <div class="footer__blur__element">
+            <img src="images/footer-blur.svg"/>
+        </div>
+        <div class="footer__gift__big">
+            <img src="images/footer-gift-big.svg"/>
+        </div>
+        <div class="footer__gift__small">
+            <img src="images/footer-gift-small.svg"/>
+        </div>
+        <div class="container">
+            <p class="text-center">
+                Номер телефона горячей линии: 
+            </p>
+            <h1 class="footer__phone header-1 text-center">
+                <a href="tel:8-800-505-98-66">8-800-505-98-66</a>
+                
+            </h1>
+            <ul class="footer__links">
+                <li><a href="#" >Вконтакте</a></li>
+                <li><a href="#" class="footer__links__email">info@kupi-maheev.ru</a> </li>
+                <li><a href="#" >Правила акции</a> </li>
+            </ul>
+            <p class="text-center">Общий срок проведения акции с 14 ноября 2022 по 14 февраля 2023 года. Срок регистрации участников в акции и регистрации чеков: с 14 ноября по 18 декабря 2022 года. Акция проводится в магазинах ТС «Лента». Правила акции, информацию об Организаторе акции, порядке и условиях её проведения можно узнать на сайте kupi-maheev.ru. Организатор акции – ООО «Ай-Экшн».
+            </p>
+        </div>
+    </footer>
+    <script src="js/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="js/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

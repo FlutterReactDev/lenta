@@ -5,15 +5,17 @@ document.addEventListener("DOMContentLoaded", function () {
   table();
 
   $('button[data-target="#registration"]').on("click", function () {
-    $("#login").css({display:'none'})
+    $("#login").css({ display: "none",opacity:0 });
     $("#registration").on("hide.bs.modal", function () {
-      $("#login").modal('hide')
-  });
+      $("#login").modal("hide");
+    });
   });
 
-  $('#datepicker').datepicker({
-    orientation: 'bottom'
-})
+  $(".datepicker").datepicker({
+    orientation: "bottom",
+  });
+
+
 });
 
 function accardion() {
@@ -46,13 +48,23 @@ function mobileMenu() {
 function table() {
   $("#table-everyday").DataTable({
     pageLength: 5,
+    responsive: true
   });
   $("#table-everyweekend").DataTable({
     pageLength: 5,
+    responsive: true
   });
   $("#table-surprise").DataTable({
     pageLength: 5,
+    responsive: true
+  });
+
+  $("#table-registration-check").DataTable({
+    pageLength: 5,
+    responsive: true
+  });
+  $("#table-applications-draws").DataTable({
+    pageLength: 5,
+    responsive: true
   });
 }
-
-

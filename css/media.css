@@ -3,10 +3,18 @@
   .header__logo {
     display: none;
   }
- 
+  /*cabinet*/
+  .cabinet__tab {
+    gap: 10px;
+  }
 }
 
 @media screen and (max-width: 992px) {
+  /*cabinet*/
+  .cabinet__tab  {
+    font-size: 14px;
+  }
+  /*hero*/
   .hero__img {
     position: static;
   }
@@ -29,6 +37,25 @@
 }
 
 @media screen and (max-width: 768px) {
+    /*cabinet*/
+    .cabinet__tab  {
+      font-size: 16px;
+      
+    }
+    .cabinet__tab.nav {
+      flex-wrap: wrap;
+    }
+    .personal-info__inner {
+      padding-left: 40px;
+    }
+    .personal-info__inner input{
+      max-width: 100%;
+    }
+    /*page 1*/
+    .photo-upload {
+      max-width: 472px;
+      margin: 0 auto;
+    }
   /*header*/
   .header__list {
     display: none;
@@ -50,6 +77,7 @@
 }
 
 @media screen and (max-width: 576px) {
+  /*hero*/
   .hero__content__title {
     font-size: 50px;
     line-height: 60px;
@@ -58,6 +86,17 @@
     margin-top: 50px;
   }
 
+  /*cabinet*/
+  .registration__check-1 input{
+    max-width: 100%;
+  }
+  .no-prize__title {
+    font-size: 32px;
+  }
+  .personal-info__inner {
+    padding-left: 0;
+  }
+  
   /*prizes*/
   .prizes__bunner__img-1 {
     display: none;
