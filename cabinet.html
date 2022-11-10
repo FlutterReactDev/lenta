@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/datatables.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="css/ui.css">
     <link rel="stylesheet" href="css/utils.css">
     <link rel="stylesheet" href="css/main.css">
@@ -127,11 +129,8 @@
                             <div  class="registration__check-2 fade show active">
                                 <div class="row mt-5">
                                     <div class="col-md-6 justify-content-end">
-                                        <div class="photo-upload alignVertical">
-                                            <div class="text-center "> <img src="images/image-upload.svg"/>
-                                                <h4 class="header-4 mt-4">Загрузить фото чека</h4></div>
-                                           
-                                        </div>
+                                        <input type="file" id="fileinput" data-preview-file-type="text">
+                                       
                                     </div>
                                     <div class="col-md-6">
                                         <h5 class="header-5 mt-2">К регистрации в Акции принимаются чеки, если:</h5>
@@ -344,7 +343,7 @@
                     <div class="row">
                         <div class="col-md-6 col-lg-4">  
                              <div class="prize__card br-32">
-                            <div class="prize__img text-center mb-5">
+                            <div class="prize__img hAlign text-center mb-5">
                                  <img src="images/prize-img-1.png"/>
                             </div>
                             <h6 class="header-6 text-center mb-5"> 2 000 баллов на карту «Лента»</h6>
@@ -357,8 +356,8 @@
                             </div>
                         </div>
                         <div class="prize__card br-32">
-                            <div class="prize__img text-center mb-5">
-                                 <img src="images/prize-img-1.png"/>
+                            <div class="prize__img hAlign text-center mb-5">
+                                 <img src="images/prize-img-2.png"/>
                             </div>
                             <h6 class="header-6 text-center mb-5"> 2 000 баллов на карту «Лента»</h6>
                             <p class="text-center color--grey  mb-4" >Дата розыгрыша: 22.12.2022</p>
@@ -370,8 +369,8 @@
                             </div>
                         </div>
                         <div class="prize__card br-32">
-                            <div class="prize__img text-center mb-5">
-                                 <img src="images/prize-img-1.png"/>
+                            <div class="prize__img hAlign text-center mb-5">
+                                 <img src="images/prize-img-3.png"/>
                             </div>
                             <h6 class="header-6 text-center mb-5"> 2 000 баллов на карту «Лента»</h6>
                             <p class="text-center color--grey  mb-4" >Дата розыгрыша: 22.12.2022</p>
@@ -386,7 +385,20 @@
                      
                     <div class="col-md-6 col-lg-4">  
                         <div class="prize__card br-32">
-                       <div class="prize__img text-center mb-5">
+                       <div class="prize__img hAlign text-center mb-5">
+                            <img src="images/prize-img-4.png"/>
+                       </div>
+                       <h6 class="header-6 text-center mb-5"> 2 000 баллов на карту «Лента»</h6>
+                       <p class="text-center color--grey  mb-4" >Дата розыгрыша: 22.12.2022</p>
+                       <div class="text-center tooltip-info"> 
+                           <button class="button button--empty prize__btn">Заполнить данные</button>
+                           <div class="button-tooltip  fs-14 text-left">
+                               Заполните запрашиваемые поля во вкладке «Персональные данные». Только после получения необходимой информации мы сможем доставить Вам приз.
+                           </div>
+                       </div>
+                   </div>
+                   <div class="prize__card br-32">
+                       <div class="prize__img hAlign text-center mb-5">
                             <img src="images/prize-img-1.png"/>
                        </div>
                        <h6 class="header-6 text-center mb-5"> 2 000 баллов на карту «Лента»</h6>
@@ -399,21 +411,8 @@
                        </div>
                    </div>
                    <div class="prize__card br-32">
-                       <div class="prize__img text-center mb-5">
-                            <img src="images/prize-img-1.png"/>
-                       </div>
-                       <h6 class="header-6 text-center mb-5"> 2 000 баллов на карту «Лента»</h6>
-                       <p class="text-center color--grey  mb-4" >Дата розыгрыша: 22.12.2022</p>
-                       <div class="text-center tooltip-info"> 
-                           <button class="button button--empty prize__btn">Заполнить данные</button>
-                           <div class="button-tooltip  fs-14 text-left">
-                               Заполните запрашиваемые поля во вкладке «Персональные данные». Только после получения необходимой информации мы сможем доставить Вам приз.
-                           </div>
-                       </div>
-                   </div>
-                   <div class="prize__card br-32">
-                       <div class="prize__img text-center mb-5">
-                            <img src="images/prize-img-1.png"/>
+                       <div class="prize__img hAlign text-center mb-5">
+                            <img src="images/prize-img-5.png"/>
                        </div>
                        <h6 class="header-6 text-center mb-5"> 2 000 баллов на карту «Лента»</h6>
                        <p class="text-center color--grey  mb-4" >Дата розыгрыша: 22.12.2022</p>
@@ -427,8 +426,8 @@
                </div>
                <div class="col-md-6 col-lg-4 ">  
                 <div class="prize__card br-32">
-               <div class="prize__img text-center mb-5">
-                    <img src="images/prize-img-1.png"/>
+               <div class="prize__img hAlign text-center mb-5">
+                    <img src="images/prize-img-6.png"/>
                </div>
                <h6 class="header-6 text-center mb-5"> 2 000 баллов на карту «Лента»</h6>
                <p class="text-center color--grey  mb-4" >Дата розыгрыша: 22.12.2022</p>
@@ -440,8 +439,8 @@
                </div>
            </div>
            <div class="prize__card br-32">
-               <div class="prize__img text-center mb-5">
-                    <img src="images/prize-img-1.png"/>
+               <div class="prize__img hAlign text-center mb-5">
+                    <img src="images/prize-img-7.png"/>
                </div>
                <h6 class="header-6 text-center mb-5"> 2 000 баллов на карту «Лента»</h6>
                <p class="text-center color--grey  mb-4" >Дата розыгрыша: 22.12.2022</p>
@@ -696,6 +695,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
     <script src="js/datatables.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/js/fileinput.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

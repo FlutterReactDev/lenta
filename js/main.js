@@ -1,11 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   mobileMenu();
- 
-
- 
 
   $('button[data-target="#registration"]').on("click", function () {
-    $("#login").css({ display: "none",opacity:0 });
+    $("#login").css({ display: "none", opacity: 0 });
     $("#registration").on("hide.bs.modal", function () {
       $("#login").modal("hide");
     });
@@ -14,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   $(".datepicker").datepicker({
     orientation: "bottom",
   });
+  $("#fileinput").fileinput({ overwriteInitial: false, });
   table();
   accardion();
 });
@@ -48,23 +46,23 @@ function mobileMenu() {
 function table() {
   $("#table-everyday").DataTable({
     pageLength: 5,
-    responsive: true
+    responsive: true,
   });
   $("#table-everyweekend").DataTable({
     pageLength: 5,
-    responsive: true
+    responsive: true,
   });
   $("#table-surprise").DataTable({
     pageLength: 5,
-    responsive: true
+    responsive: true,
   });
 
   $("#table-registration-check").DataTable({
     pageLength: 5,
-    responsive: true
+    responsive: true,
   });
   $("#table-applications-draws").DataTable({
     pageLength: 5,
-    responsive: true
+    responsive: true,
   });
 }

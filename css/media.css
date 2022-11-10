@@ -143,4 +143,13 @@
   .footer {
     font-size: 14px;
   }
+
+  .footer__links {
+    display: block;
+    text-align: center;
+
+  }
+  .footer__links  li{
+    margin-top: 20px;
+  }
 }

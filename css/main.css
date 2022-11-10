@@ -839,8 +839,14 @@ input[type="checkbox"]:checked + label .checkbox-mark {
  
   width: 100%;
   padding: 30px 10px;
+ 
   margin-bottom: 30px;
 }
+.prize__img {
+  width: 205px;
+  height: 205px;
+}
+
 
 .prize-container {
   gap: 30px;
